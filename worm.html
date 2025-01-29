@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Salt Design - ワーム</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        /* ナビバー */
+        .navbar {
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .navbar a:hover {
+            background-color: gray;
+        }
+
+    /* 画像コンテナ */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-container a {
+            display: block;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ナビバー -->
+    <div class="navbar">
+        <a href="worm.html">ワーム</a>
+        <a href="seisaku.html">製作方法</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">X</a>
+        <a href="#notices">お知らせ</a>
+    </div>
+
+    <h1>Light Salt Design</h1>
+
+ <!-- 画像エリア -->
+    <div class="image-container">
+        <!-- ワーム画像（スライドショー） -->
+     <div class="image-box">
+        <a href="flos.html">
+            <img id="flos-image" src="flos1.jpg" alt="フロス">
+        </a>
+        <div class="caption">FLOS</div>
+     </div>
+
+        <!-- newworm（スライドショー） -->
+        <div class="image-box">
+        <a href="newworw.html">
+            <img id="newworm-image" src="newworm.jpg" alt="newworm">
+        </a>
+        <div class="caption">newworm</div>
+     </div>
+
+    </div>
+
+</body>
+</html>
