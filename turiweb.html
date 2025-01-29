@@ -9,16 +9,6 @@
     <meta name="author" content="Light Salt Design">
     <link rel="canonical" href="https://your-website.com">
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Website",
-        "name": "Light Salt Design",
-        "url": "https://your-website.com",
-        "description": "ワームの紹介と製作方法。最新情報も随時更新！"
-    }
-    </script>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,18 +34,20 @@
         .navbar a:hover {
             background-color: gray;
         }
+
         /* 画像コンテナ */
         .image-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 10px;
             margin: 20px 0;
         }
         .image-box {
-            width: 90%;
+            width: 100%;
             max-width: 500px;
             text-align: center;
+            box-sizing: border-box;
         }
         .image-box a {
             display: block;
@@ -65,12 +57,13 @@
         .image-box img {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            display: block;
         }
         .caption {
             margin-top: 5px;
             font-weight: bold;
         }
+
         /* お知らせ欄 */
         .notice-container {
             margin: 20px;
@@ -84,9 +77,14 @@
             padding: 10px;
             width: 100%;
         }
+
         /* スマホ対応 */
         @media (max-width: 600px) {
             .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-container {
                 flex-direction: column;
                 align-items: center;
             }
@@ -126,9 +124,7 @@
     <div class="notice-container">
         <h2>お知らせ</h2>
         <div class="notice-box" id="notices">
-            <ul id="notice-list">
-                <!-- 最新のお知らせ4件がここに表示される -->
-            </ul>
+            <ul id="notice-list"></ul>
         </div>
     </div>
 
@@ -166,20 +162,7 @@
             });
         }
 
-        function addNotice(newNotice) {
-            notices.unshift(newNotice);
-            if (notices.length > 4) {
-                notices.pop();
-            }
-            updateNotices();
-        }
-
         updateNotices();
-
-        function adminAddNotice(text, link) {
-            let newNotice = { text: text, link: link };
-            addNotice(newNotice);
-        }
     </script>
 
 </body>
