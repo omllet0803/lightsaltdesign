@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Salt Design - flos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        /* ナビバー */
+        .navbar {
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .navbar a:hover {
+            background-color: gray;
+        }
+
+     /* 画像コンテナ */
+        .image-container {
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-container a {
+            display: block;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ナビバー -->
+    <div class="navbar">
+        <a href="worm.html">ワーム</a>
+        <a href="seisaku.html">製作方法</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">X</a>
+        <a href="#notices">お知らせ</a>
+    </div>
+    
+    <h1>FLOS</h1>
+
+    
+   
+
+
+   <!-- 説明エリア -->
+    <div class="image-container">
+        <!-- ワーム画像（スライドショー） -->
+        <a href="flos.html">
+            <img id="flos-image" src="flos1.jpg" alt="フロス" >
+        </a>
+        <div class="caption">
+        <p>フロスはエビの尾びれをイメージしたテールを設けており、</p>
+        <p>ワーム中央部にくびれを持たせることにより大振りのワームながら機敏な動きを実現。</p>
+        <p></p>
+        <p>フロスのフラットな面を上向きにジグヘットを刺すと平らな面が抵抗となり錆びくのに最適である。</p>
+        <p>フラットな面を下向きにジグヘッドを刺すとトゥイッチした際の動きに最適でありリアクションバイトを誘発できる。</p>
+        <p>サイズは１．４インチとなっている。</p>
+        <p>小型のメバルから大型のメバルまで幅広く狙える。</p>
+
+        </div>
+
+    </div>
+    
+    <script>
+        // 画像スライドショー（5秒ごとに切り替え）
+        let flosmages = ["flos1.jpg", "flos2.jpg", "flos3.jpg"];
+        let flosIndex = 0;
+        
+
+        function changeImages() {
+            flosndex = (flosndex + 1) % flosImages.length;
+            document.getElementById("flos-image").src = flosImages[flosIndex];
+            
+ flosImages[flosIndex];
+        }
+        setInterval(changeImages, 5000); // 5秒ごとに画像を変更
+	</script>
+
+     
+     
+
+</body>
+</html>
+
