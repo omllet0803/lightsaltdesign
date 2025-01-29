@@ -46,7 +46,7 @@
         }
         .image-box {
             width: 100%;
-            max-width: 100px;
+            max-width: 500px;
             text-align: center;
             box-sizing: border-box;
         }
